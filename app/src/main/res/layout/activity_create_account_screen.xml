@@ -93,7 +93,7 @@
     <!-- Join -->
 
     <View
-        android:id="@+id/rectangle_2"
+        android:id="@+id/joinbtn"
         android:layout_width="125dp"
         android:layout_height="52dp"
         android:layout_alignParentLeft="true"
@@ -117,10 +117,10 @@
         android:text="@string/join"
         android:textAppearance="@style/join"
         android:translationY="-1.55sp"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+        app:layout_constraintBottom_toBottomOf="@+id/joinbtn"
+        app:layout_constraintEnd_toEndOf="@+id/joinbtn"
+        app:layout_constraintStart_toStartOf="@+id/joinbtn"
+        app:layout_constraintTop_toTopOf="@+id/joinbtn" />
     <!-- Rectangle 23 -->
 
     <View
@@ -169,7 +169,7 @@
         app:layout_constraintEnd_toStartOf="@+id/continue_wi"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintTop_toBottomOf="@+id/joinbtn"
         app:layout_constraintVertical_bias="0.323" />
 
     <TextView
