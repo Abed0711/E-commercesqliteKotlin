@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">e-comKotlin</string>
+    <string name="stay_high_s">Stay High.\nStay Happy.\nAlways.</string>
+    <string name="spliff">Spliff</string>
+    <!-- strings.xml -->
+    <string name="join">Join</string>
+
+    <!-- strings.xml -->
+    <string name="log_in">Log In</string>
+
+    <!-- strings.xml -->
+    <string name="continue_wi">Continue with google</string>
+
+
+</resources>

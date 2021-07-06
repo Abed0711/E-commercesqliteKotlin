@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createAccountScreen">
+
+    <!-- Rectangle 23 -->
+
+    <!-- Spliff -->
+
+    <View
+        android:id="@+id/rectangle1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/vector"
+        android:layout_width="12dp"
+        android:layout_height="27dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="379dp"
+        android:layout_marginEnd="187dp"
+        android:layout_marginRight="182dp"
+        android:layout_marginBottom="405dp"
+        android:background="@drawable/ic_vector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <View
+        android:id="@+id/sniff"
+        android:layout_width="70dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginRight="151dp"
+        android:layout_marginBottom="358dp"
+        android:background="@drawable/ic_spliff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Stay High. Stay Happy. Always. -->
+    <TextView
+        android:id="@+id/stay_high_s"
+        android:layout_width="199dp"
+        android:layout_height="153dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
+        android:layout_marginBottom="191dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/stay_high_s"
+        android:textAppearance="@style/stay_high_s"
+        android:translationY="-3.78sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sniff" />
+
+    <!-- Rectangle 24 -->
+    <!-- Join -->
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/ic_rectangle_24"
+        app:layout_constraintEnd_toStartOf="@+id/rectangle3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stay_high_s" />
+
+    <TextView
+        android:id="@+id/join"
+        android:layout_width="36dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/join"
+        android:textAppearance="@style/join"
+        android:translationY="-1.55sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+    <!-- Rectangle 23 -->
+
+    <View
+        android:id="@+id/rectangle3"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/ic_rectangle_25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stay_high_s" />
+
+    <TextView
+        android:id="@+id/log_in"
+        android:layout_width="51dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/log_in"
+        android:textAppearance="@style/log_in"
+        android:translationY="-1.55sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle3"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle3"
+        app:layout_constraintStart_toStartOf="@+id/rectangle3"
+        app:layout_constraintTop_toTopOf="@+id/rectangle3" />
+
+    <!-- google logo -->
+
+    <!-- Continue with google -->
+
+    <RelativeLayout
+        android:id="@+id/google_logo"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/ic_google_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/continue_wi"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <TextView
+        android:id="@+id/continue_wi"
+        android:layout_width="178dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/continue_wi"
+        android:textAppearance="@style/continue_wi"
+        android:translationY="-1.89sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle1"
+        app:layout_constraintTop_toBottomOf="@+id/stay_high_s"
+        app:layout_constraintVertical_bias="0.712" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
