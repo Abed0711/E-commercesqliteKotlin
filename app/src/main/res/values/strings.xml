@@ -11,5 +11,32 @@
     <!-- strings.xml -->
     <string name="continue_wi">Continue with google</string>
 
+    <!-- strings.xml -->
+    <string name="create_your">Create your account</string>
+
+    <!-- strings.xml -->
+    <string name="email_addre">
+
+        Email address
+    </string>
+
+    <string name="by_creating">
+
+By creating an account you agree with our terms and conditions
+</string>
+
+    <!-- strings.xml -->
+    <string name="create_an_a">
+
+        Create an account
+    </string>
+    <!-- strings.xml -->
+    <string name="already_a_m">
+
+        Already a member? Log in
+    </string>
+
+
+
 
 </resources>
