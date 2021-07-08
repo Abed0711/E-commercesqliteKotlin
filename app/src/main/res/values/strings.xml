@@ -13,6 +13,7 @@
 
     <!-- strings.xml -->
     <string name="create_your">Create your account</string>
+    <string name="login_your">Sign in your account</string>
 
     <!-- strings.xml -->
     <string name="email_addre">
@@ -35,8 +36,6 @@ By creating an account you agree with our terms and conditions
 
         Already a member? Log in
     </string>
-
-
 
 
 </resources>

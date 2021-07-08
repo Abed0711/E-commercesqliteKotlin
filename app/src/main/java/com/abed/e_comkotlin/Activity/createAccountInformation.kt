@@ -56,8 +56,8 @@ class createAccountInformation : AppCompatActivity() {
                 editTextPass.requestFocus()
                 return@setOnClickListener
             }
-            //registerNewUser(email, password, password, "Hos")
-            login(email,password)
+            registerNewUser(email, password, password, "Hos")
+            //login(email,password)
         })
 
 
