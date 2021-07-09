@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".createAccountScreen">
+    tools:context=".Activity.createAccountScreen">
 
     <!-- Rectangle 23 -->
 
@@ -24,48 +24,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <View
-        android:id="@+id/vector"
-        android:layout_width="12dp"
-        android:layout_height="27dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="177dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="379dp"
-        android:layout_marginEnd="187dp"
-        android:layout_marginRight="182dp"
-        android:layout_marginBottom="405dp"
-        android:background="@drawable/ic_vector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
-
-    <View
-        android:id="@+id/sniff"
-        android:layout_width="70dp"
-        android:layout_height="52dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginLeft="153dp"
-        android:layout_marginTop="402dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginRight="151dp"
-        android:layout_marginBottom="358dp"
-        android:background="@drawable/ic_spliff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <!-- Stay High. Stay Happy. Always. -->
     <TextView
         android:id="@+id/stay_high_s"
@@ -75,7 +33,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="90dp"
         android:layout_marginLeft="90dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="86dp"
         android:layout_marginRight="86dp"
         android:layout_marginBottom="191dp"
@@ -86,8 +43,7 @@
         android:translationY="-3.78sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sniff" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Rectangle 24 -->
     <!-- Join -->

@@ -1,5 +1,6 @@
 package com.abed.e_comkotlin.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -77,7 +78,8 @@ class login_screen : AppCompatActivity() {
                                 ?.string()
                         )
                     )
-                    Toast.makeText(applicationContext, "Yes!!!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@login_screen, homeScreen::class.java)
+                    startActivity(intent)
 
                 } else {
 

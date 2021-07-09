@@ -1,5 +1,6 @@
 package com.abed.e_comkotlin.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,6 +33,7 @@ class createAccountInformation : AppCompatActivity() {
     lateinit var editTextEmail: EditText
     lateinit var editTextPass: EditText
     lateinit var checkBox: CheckBox
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,8 +88,10 @@ class createAccountInformation : AppCompatActivity() {
                                 ?.string()
                         )
                     )
-                    Toast.makeText(applicationContext, response.toString(), Toast.LENGTH_SHORT).show()
+;
 
+                        val intent = Intent(this@createAccountInformation, homeScreen::class.java)
+                        startActivity(intent)
                 } else {
 
                     Toast.makeText(applicationContext, "User Not Added ..", Toast.LENGTH_SHORT)

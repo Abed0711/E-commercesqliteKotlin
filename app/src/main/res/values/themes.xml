@@ -174,7 +174,14 @@
 
     </style>
 
+    <style name="Theme.EcomKotlin.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
+    <style name="Theme.EcomKotlin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.EcomKotlin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

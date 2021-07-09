@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcomKotlin"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.login_screen"></activity>
+        <activity
+            android:name=".Activity.homeScreen"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.EcomKotlin.NoActionBar"></activity>
+        <activity android:name=".Activity.login_screen" />
         <activity android:name=".Activity.loginScreen" />
         <activity android:name=".Activity.createAccountInformation" />
 
