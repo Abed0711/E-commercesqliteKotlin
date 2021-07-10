@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.MainActivity"
+    tools:context=".Activity.SqlCrud"
+    android:background="@drawable/round_bg"
     >
 
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="127dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:gravity="center_vertical"
-        android:text="SQLite->"
-        android:textSize="20sp"/>
+        android:text="SQLite"
+        android:textSize="20sp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -39,13 +42,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
+
         <Button
+            android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnAdd"
+            android:layout_marginLeft="10dp"
             android:text="Add"
             android:textAllCaps="false"
-            android:layout_marginLeft="10dp"/>
+            app:backgroundTint="@color/black" />
 
     </LinearLayout>
 

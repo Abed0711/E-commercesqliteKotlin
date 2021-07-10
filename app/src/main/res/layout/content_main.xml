@@ -75,7 +75,7 @@
             android:layout_marginLeft="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_shopping_cart_with_up_arrow_e_commerce_symbol" />
+            app:srcCompat="@drawable/ic_traveler" />
 
         <ImageView
             android:id="@+id/Sql"
@@ -86,7 +86,7 @@
             app:layout_constraintEnd_toStartOf="@+id/logout_Screen"
             app:layout_constraintStart_toEndOf="@+id/exploreSqlitedata"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_verified_shopping_cart_e_commerce_symbol" />
+            app:srcCompat="@drawable/ic_sql" />
 
         <ImageView
             android:id="@+id/logout_Screen"
@@ -97,14 +97,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/Sql"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_upload" />
+            app:srcCompat="@drawable/ic_arrow" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Explore"
+            android:text=" Explore Everything"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView12"
             app:layout_constraintHorizontal_bias="0.369"
@@ -116,8 +116,8 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
@@ -126,7 +126,7 @@
             app:layout_constraintEnd_toStartOf="@+id/textView13"
             app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/Sql"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.111" />
 
         <TextView
             android:id="@+id/textView13"

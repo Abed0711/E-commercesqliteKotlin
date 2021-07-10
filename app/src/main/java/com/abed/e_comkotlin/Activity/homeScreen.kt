@@ -44,7 +44,7 @@ class homeScreen : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Opening Cart", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
 
             val intent = Intent(this, Cartshow::class.java)
@@ -63,9 +63,9 @@ class homeScreen : AppCompatActivity() {
         )
 
         val categoryItemList: MutableList<CategoryItem> = ArrayList()
-        categoryItemList.add(CategoryItem(1, R.drawable.rectangle))
-        categoryItemList.add(CategoryItem(2, R.drawable.rectangle))
-        categoryItemList.add(CategoryItem(3, R.drawable.rectangle))
+        categoryItemList.add(CategoryItem(1, R.drawable.ic__hapu))
+        categoryItemList.add(CategoryItem(2, R.drawable.ic_smartphone))
+        categoryItemList.add(CategoryItem(3, R.drawable.ic_online_shopping))
 
         val allCategory: MutableList<AllCategories> = ArrayList()
         allCategory.add(AllCategories(categoryItemList))
