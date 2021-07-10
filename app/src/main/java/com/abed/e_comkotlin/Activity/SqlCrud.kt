@@ -31,11 +31,11 @@ class SqlCrud : AppCompatActivity() {
         setContentView(R.layout.activity_sql_crud)
 
         initView()
-        initRecyclerView()
+        //initRecyclerView()
         sqliteHelper = SQLLiteHelper(this)
 
         btnAdd.setOnClickListener { addElectronics() }
-        btnView.setOnClickListener { getElectronics() }
+        //btnView.setOnClickListener { getElectronics() }
 
     }
 
@@ -83,16 +83,16 @@ class SqlCrud : AppCompatActivity() {
         edName = findViewById(R.id.edName)
         edPrice = findViewById(R.id.price)
         btnAdd = findViewById(R.id.btnAdd)
-        btnView = findViewById(R.id.btnView)
-        recyclerView = findViewById(R.id.recyclerViewExp)
+        //btnView = findViewById(R.id.btnView)
+        //recyclerView = findViewById(R.id.recyclerViewExp)
     }
 
-    private fun initRecyclerView() {
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = ElectronicsAdapter()
-        recyclerView.adapter = adapter
-
-    }
+//    private fun initRecyclerView() {
+//        recyclerView.layoutManager = LinearLayoutManager(this)
+//        adapter = ElectronicsAdapter()
+//        recyclerView.adapter = adapter
+//
+//    }
 
 
 }

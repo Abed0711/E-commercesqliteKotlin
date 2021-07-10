@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,14 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcomKotlin"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.exploreActivity"></activity>
-        <activity android:name=".Activity.SqlCrud"></activity>
+        <activity android:name=".Activity.ExploreData"></activity>
+        <activity android:name=".Activity.exploreActivity" />
+        <activity android:name=".Activity.SqlCrud" />
         <activity
             android:name=".Activity.homeScreen"
             android:label="@string/title_activity_home_screen"
             android:theme="@style/Theme.EcomKotlin.NoActionBar" />
         <activity android:name=".Activity.login_screen" />
-
         <activity android:name=".Activity.createAccountInformation" />
 
         <meta-data

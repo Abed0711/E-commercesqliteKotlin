@@ -44,22 +44,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnAdd"
             android:text="Add"
-            android:textAllCaps="false"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnView"
-            android:text="view"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"/>
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewExp"
-        android:layout_width="match_parent"
-        android:layout_height="498dp"
-        android:layout_marginTop="16dp" />
 
-
-
-    </LinearLayout>
+</LinearLayout>

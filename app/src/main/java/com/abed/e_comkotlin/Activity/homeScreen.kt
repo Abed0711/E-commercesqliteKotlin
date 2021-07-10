@@ -3,7 +3,6 @@ package com.abed.e_comkotlin.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -18,11 +17,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abed.e_comkotlin.R
 import com.abed.e_comkotlin.Session.LoginPref
-import com.abed.e_comkotlin.adapter.ElectronicsAdapter
 import com.abed.e_comkotlin.adapter.MainRecyclerAdapter
 import com.abed.e_comkotlin.models.AllCategories
 import com.abed.e_comkotlin.models.CategoryItem
-import com.abed.e_comkotlin.models.SQLLiteHelper
 import com.google.android.material.navigation.NavigationView
 
 
@@ -89,11 +86,11 @@ class homeScreen : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        imageViewSqlView.setOnClickListener {
-//            val intent = Intent(this, exploreActivity::class.java)
-//            startActivity(intent)
-//
-//        }
+        imageViewSqlView.setOnClickListener {
+            val intent = Intent(this, ExploreData::class.java)
+            startActivity(intent)
+
+        }
 
 
     }
