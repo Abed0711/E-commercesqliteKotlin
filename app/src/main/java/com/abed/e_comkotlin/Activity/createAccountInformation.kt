@@ -88,9 +88,10 @@ class createAccountInformation : AppCompatActivity() {
                                 ?.string()
                         )
                     )
-;
+                    Toast.makeText(applicationContext, responseData, Toast.LENGTH_SHORT)
+                        .show()
 
-                        val intent = Intent(this@createAccountInformation, homeScreen::class.java)
+                        val intent = Intent(this@createAccountInformation, login_screen::class.java)
                         startActivity(intent)
                 } else {
 
@@ -103,39 +104,39 @@ class createAccountInformation : AppCompatActivity() {
     }
 
 
-    fun login(email: String, password: String) {
-        val service = retrofit.create(APIService::class.java)
-        val fields: HashMap<String?, RequestBody?> = HashMap()
-        fields["email"] = email.toRequestBody("text/plain".toMediaTypeOrNull())
-        fields["password"] = password.toRequestBody("text/plain".toMediaTypeOrNull())
-        Toast.makeText(applicationContext, fields["email"].toString(), Toast.LENGTH_SHORT).show()
-
-        CoroutineScope(Dispatchers.IO).launch {
-
-            // Do the POST request and get response
-            val response = service.loginUser(fields)
-
-            withContext(Dispatchers.Main) {
-
-                if (response.isSuccessful) {
-                    val gson = GsonBuilder().setPrettyPrinting().create()
-                    val responseData = gson.toJson(
-                        JsonParser.parseString(
-                            response.body()
-                                ?.string()
-                        )
-                    )
-                    Toast.makeText(applicationContext, "Yes!!!", Toast.LENGTH_SHORT).show()
-
-                } else {
-
-                    Toast.makeText(applicationContext, "User Not Added ..", Toast.LENGTH_SHORT)
-                        .show()
-
-                }
-            }
-        }
-    }
+//    fun login(email: String, password: String) {
+//        val service = retrofit.create(APIService::class.java)
+//        val fields: HashMap<String?, RequestBody?> = HashMap()
+//        fields["email"] = email.toRequestBody("text/plain".toMediaTypeOrNull())
+//        fields["password"] = password.toRequestBody("text/plain".toMediaTypeOrNull())
+//        Toast.makeText(applicationContext, fields["email"].toString(), Toast.LENGTH_SHORT).show()
+//
+//        CoroutineScope(Dispatchers.IO).launch {
+//
+//            // Do the POST request and get response
+//            val response = service.loginUser(fields)
+//
+//            withContext(Dispatchers.Main) {
+//
+//                if (response.isSuccessful) {
+//                    val gson = GsonBuilder().setPrettyPrinting().create()
+//                    val responseData = gson.toJson(
+//                        JsonParser.parseString(
+//                            response.body()
+//                                ?.string()
+//                        )
+//                    )
+//                    Toast.makeText(applicationContext, "Yes!!!", Toast.LENGTH_SHORT).show()
+//
+//                } else {
+//
+//                    Toast.makeText(applicationContext, "User Not Added ..", Toast.LENGTH_SHORT)
+//                        .show()
+//
+//                }
+//            }
+//        }
+//    }
 
 
 //    private fun signin(email: String, password: String) {

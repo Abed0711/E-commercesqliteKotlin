@@ -16,4 +16,7 @@ interface APIService {
     @POST("login")
     suspend fun loginUser(@PartMap map: HashMap<String?, RequestBody?>): Response<ResponseBody>
 
+    @Multipart
+    @POST("logout")
+    suspend fun logOut(@PartMap map: HashMap<String?, RequestBody?>): Response<ResponseBody>
 }

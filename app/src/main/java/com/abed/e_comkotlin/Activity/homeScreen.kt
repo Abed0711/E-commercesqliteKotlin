@@ -1,24 +1,30 @@
 package com.abed.e_comkotlin.Activity
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abed.e_comkotlin.R
+import com.abed.e_comkotlin.Session.LoginPref
+import com.abed.e_comkotlin.adapter.ElectronicsAdapter
 import com.abed.e_comkotlin.adapter.MainRecyclerAdapter
 import com.abed.e_comkotlin.models.AllCategories
 import com.abed.e_comkotlin.models.CategoryItem
+import com.abed.e_comkotlin.models.SQLLiteHelper
+import com.google.android.material.navigation.NavigationView
+
 
 class homeScreen : AppCompatActivity() {
 
@@ -27,17 +33,21 @@ class homeScreen : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
+
+    lateinit var session: LoginPref
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val fab: FloatingActionButton = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+//        val fab: FloatingActionButton = findViewById(R.id.fab)
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
+//        }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -49,16 +59,43 @@ class homeScreen : AppCompatActivity() {
             ), drawerLayout
         )
 
-        val categoryItemList:MutableList<CategoryItem> =ArrayList()
-        categoryItemList.add(CategoryItem(1,R.drawable.rectangle))
-        categoryItemList.add(CategoryItem(2,R.drawable.rectangle))
-        categoryItemList.add(CategoryItem(3,R.drawable.rectangle))
+        val categoryItemList: MutableList<CategoryItem> = ArrayList()
+        categoryItemList.add(CategoryItem(1, R.drawable.rectangle))
+        categoryItemList.add(CategoryItem(2, R.drawable.rectangle))
+        categoryItemList.add(CategoryItem(3, R.drawable.rectangle))
 
         val allCategory: MutableList<AllCategories> = ArrayList()
         allCategory.add(AllCategories(categoryItemList))
         setMainCategoryRecycler(allCategory)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        var imageView: ImageView = findViewById(R.id.logout_Screen)
+        var imageViewSql: ImageView = findViewById(R.id.Sql)
+        var imageViewSqlView: ImageView = findViewById(R.id.exploreSqlitedata)
+
+        imageView.setOnClickListener {
+            val preferences = getSharedPreferences("Login_preference", Context.MODE_PRIVATE)
+            val editor = preferences.edit()
+            editor.clear()
+            editor.apply()
+            finish()
+            val intent = Intent(this, login_screen::class.java)
+            startActivity(intent)
+        }
+
+        imageViewSql.setOnClickListener {
+            val intent = Intent(this, SqlCrud::class.java)
+            startActivity(intent)
+        }
+
+//        imageViewSqlView.setOnClickListener {
+//            val intent = Intent(this, exploreActivity::class.java)
+//            startActivity(intent)
+//
+//        }
+
+
     }
 
 
@@ -81,4 +118,6 @@ class homeScreen : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
 }
