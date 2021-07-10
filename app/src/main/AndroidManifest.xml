@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcomKotlin"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.ExploreData"></activity>
+        <activity android:name=".Activity.Cartshow"></activity>
+        <activity android:name=".Activity.ExploreData" />
         <activity android:name=".Activity.exploreActivity" />
         <activity android:name=".Activity.SqlCrud" />
         <activity

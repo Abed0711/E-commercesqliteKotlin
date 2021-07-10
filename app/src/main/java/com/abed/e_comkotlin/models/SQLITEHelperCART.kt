@@ -7,50 +7,53 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import java.lang.Exception
 
-class SQLLiteHelper(context: Context) :
+class SQLLITEHelperCART(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
         private const val DATABASE_VERSION = 1
-        private const val DATABASE_NAME = "eCom.db"
-        private const val TBL_ELECTRONICS = "tbl_electronics"
+        private const val DATABASE_NAME = "eCom1.db"
 
-        private const val ID = "id"
-        private const val PD_NAME = "pd_name"
-        private const val PD_PRICE = "pd_price"
-
-
+        val TBL_CART = "tbl_cart"
+        val ID_cart = "id"
+        val PD_NAME_cart = "pd_name"
+        val PD_PRICE_cart = "pd_price"
 
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
+
+
         val createTbleCom =
-            ("CREATE TABLE $TBL_ELECTRONICS($ID INTEGER PRIMARY KEY,$PD_NAME TEXT,$PD_PRICE INTEGER)")
+            ("CREATE TABLE $TBL_CART($ID_cart INTEGER PRIMARY KEY,$PD_NAME_cart TEXT,$PD_PRICE_cart INTEGER)");
+
+
         db?.execSQL(createTbleCom)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db!!.execSQL("DROP TABLE IF EXISTS $TBL_ELECTRONICS")
+        db!!.execSQL("DROP TABLE IF EXISTS $TBL_CART")
         onCreate(db)
     }
 
 
-    fun insertElectronics(std: ElectronicsModel): Long {
+    fun insertCART(std: CartModel): Long {
+
         val db = this.writableDatabase
 
         val contentValues = ContentValues()
-        contentValues.put(ID, std.id)
-        contentValues.put(PD_NAME, std.name)
-        contentValues.put(PD_PRICE, std.price)
+        contentValues.put(ID_cart, std.idCart)
+        contentValues.put(PD_NAME_cart, std.nameCart)
+        contentValues.put(PD_PRICE_cart, std.priceCart)
 
-        val success = db.insert(TBL_ELECTRONICS, null, contentValues)
+        val success = db.insert(TBL_CART, null, contentValues)
         db.close()
         return success
     }
 
-    fun getAllElectronics(): ArrayList<ElectronicsModel> {
-        val stdList: ArrayList<ElectronicsModel> = ArrayList()
-        val selectQuery = "SELECT * FROM $TBL_ELECTRONICS"
+    fun getAllCART(): ArrayList<CartModel> {
+        val stdList: ArrayList<CartModel> = ArrayList()
+        val selectQuery = "SELECT * FROM $TBL_CART"
         val db = this.readableDatabase
 
         val cursor: Cursor?
@@ -72,7 +75,7 @@ class SQLLiteHelper(context: Context) :
                 name = cursor.getString(cursor.getColumnIndex("pd_name"))
                 price = cursor.getString(cursor.getColumnIndex("pd_price"))
 
-                val std = ElectronicsModel(id = id, name = name, price = price)
+                val std = CartModel(idCart = id, nameCart = name, priceCart = price)
                 stdList.add(std)
             } while (cursor.moveToNext())
         }
