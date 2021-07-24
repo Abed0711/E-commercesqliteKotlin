@@ -18,7 +18,7 @@ object RetroFitClient {
             val original = chain.request()
             val requestBuilder = original.newBuilder()
                 //.addHeader("Authorization", "")
-                .method(original.method(), original.body())
+                .method(original.method, original.body)
             val request = requestBuilder.build()
             chain.proceed(request)
         }.build()
