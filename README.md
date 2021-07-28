@@ -1,4 +1,4 @@
-#Sql Lite CRUD + RETROFIT2
+#Sqlite CRUD + RETROFIT2
 
 Please follow these instruction:
 1.	Language: KOTLIN
